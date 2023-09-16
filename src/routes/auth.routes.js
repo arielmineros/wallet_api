@@ -6,6 +6,7 @@ const {
     login,
     logout,
     profile,
+    verify,
 } = require("../controllers/auth.controller");
 const authRequired = require("../middlewares/validateTOken");
 
@@ -14,5 +15,6 @@ router.post("/register", register);
 router.post("/login", login);
 router.post("/logout", logout);
 router.get("/profile", authRequired, profile);
+router.get("/verify", verify);
 
 module.exports = router;

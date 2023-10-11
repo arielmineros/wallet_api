@@ -18,6 +18,7 @@ const createBook = async (req, res) => {
         publishingDetails,
         serieDetails,
         author,
+        imageUrl,
         description,
     } = req.body;
     const newBook = new Book({
@@ -29,6 +30,7 @@ const createBook = async (req, res) => {
         serieDetails,
         author,
         description,
+        imageUrl,
         user: req.user.id,
     });
     const savedBook = await newBook.save();

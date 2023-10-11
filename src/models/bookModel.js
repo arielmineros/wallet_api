@@ -43,6 +43,11 @@ const bookSchema = mongoose.Schema(
             required: [true, "Please enter a description"],
             trim: true,
         },
+        imageUrl:{
+            type:String,
+            required:[true,"Please enter an image url"],
+            trim:true,
+        },
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: User,

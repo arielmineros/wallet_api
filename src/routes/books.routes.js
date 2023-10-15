@@ -14,7 +14,7 @@ routerBooks.get("/books", authRequired, getBooks);
 routerBooks.get("/books-user", authRequired, getUserBooks);
 routerBooks.post("/books", authRequired, createBook);
 routerBooks.delete("/books/:id", authRequired, deleteBook);
-routerBooks.get("/books/:id", authRequired, getBook);
-routerBooks.put("/books/:id", authRequired, updateBook);
+routerBooks.get("/books-user/:id", authRequired, getBook);
+routerBooks.put("/books-user/:id", authRequired, updateBook);
 
 module.exports = routerBooks;
